@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="/Main-css/index.css" >
+    <title>Calculator App</title>
+</head>
+<body>
+    <div id="full-calc" class="full-calc">
+        <h1 class="title"><span>C</span>alculator<span><!--creates space between spans-->&nbsp; A</span>pp</h1>
+        <br>
+        <br>
+        <section id="sec-1" class="sec-1">
+            <div id="calc-header" class="calc-header">
+                <h3>calc.</h3>
+            </div>
+            <div id="toggleSwitch" class="toggleSwitch">
+                <p id="numbers" class="numbers">1 2</p>
+                <div id="flip-switch" class="flip-switch">
+                    <p id="theme" class="theme">theme</p>
+                    <label class="label">
+                        <input type="checkbox" id="checkbox" class="checkbox">
+                        <span class="slideBar"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section id="sec-2" class="sec-2">
+            <div id="totals" class="totals">
+                <input type="text" id="display" class="display" readonly> 
+            </div>
+        </section>
+        <section>
+            <div id="keypad" class="keypad">
+                <table>
+                    <tr>
+                        <td><button onclick="appendToDisplay('7')">7</button></td>
+                        <td><button onclick="appendToDisplay('8')">8</button></td>
+                        <td><button onclick="appendToDisplay('9')">9</button></td>
+                        <td><button id="del-btn" onclick="clearOneDigit('DEL')">DEL</button class=".operator-btn"></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDisplay('4')">4</button></td>
+                        <td><button onclick="appendToDisplay('5')">5</button></td>
+                        <td><button onclick="appendToDisplay('6')">6</button></td>
+                        <td><button onclick="appendToDisplay('+')">+</button class=".operator-btn"></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDisplay('1')">1</button></td>
+                        <td><button onclick="appendToDisplay('2')">2</button></td>
+                        <td><button onclick="appendToDisplay('3')">3</button></td>
+                        <td><button onclick="appendToDisplay('-')">-</button class=".operator-btn"></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="appendToDisplay('.')">.</button></td>
+                        <td><button onclick="appendToDisplay('0')">0</button></td>
+                        <td><button onclick="appendToDisplay('/')">/</button class=".operator-btn"></td>
+                        <td><button onclick="appendToDisplay('*')">*</button class=".operator-btn"></td>
+                    </tr>
+                    <tr id="bottom-btn">
+                        <td><button class="reset-btn" onclick="clearDisplay()">RESET</button class=".operator-btn"></td>
+                        <td><button class="equal-btn" onclick="calculate('=')">=</button></td>
+                    </tr>
+                </table>
+                
+            </div>
+        </section>
+    </div>
+
+
+    
+    <!-- JavaScript function -->
+    <script src="/Main-js/index.js" charset="UTF-8">
+
+    </script>
+</body>
+</html>

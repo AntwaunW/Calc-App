@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(222, 26%, 31%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+span {
+  color: orange;
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.label .checkbox {
+  display: none;
+}
+.label .slideBar {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 31%, 20%);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.label .slideBar::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.label input:checked + .slideBar {
+  background-color: green;
+}
+.label input:checked + .slideBar:before {
+  transform: translateX(26px);
+}
+
+.sec-2 {
+  width: 100px;
+  display: flex;
+}
+.sec-2 .display {
+  width: 360px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 70px;
+  border-radius: 10px;
+  color: white;
+  font-size: 40px;
+}
+
+h3 {
+  color: orange;
+  font-size: 25px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.sec-1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* .display box moved to the left to even up with keyboard */
+.display {
+  position: relative;
+  right: 10px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.flip-switch {
+  display: flex;
+  gap: 1rem;
+}
+
+.display {
+  border: none;
+  background-color: hsl(223, 31%, 20%);
+  margin: 1rem;
+}
+
+.keypad {
+  background-color: hsl(223, 31%, 20%);
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 40px;
+  border-radius: 5%;
+}
+
+tr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+td {
+  align-items: center;
+  margin: 6px;
+  width: 60px;
+  border: none;
+}
+
+button {
+  background-color: rgb(252, 242, 220);
+  padding: 1rem;
+  width: 60px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0px 3px rgba(255, 187, 0, 0.658);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255, 220, 146);
+}
+
+button:active {
+  background-color: rgb(255, 204, 85);
+}
+
+#del-btn:hover {
+  background-color: rgb(107, 202, 234);
+}
+
+#del-btn:active {
+  background-color: rgb(73, 135, 156);
+}
+
+#del-btn {
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+}
+
+.reset-btn {
+  width: auto;
+  background-color: lightblue;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: rgb(107, 202, 234);
+}
+
+.reset-btn:active {
+  background-color: rgb(73, 135, 156);
+}
+
+.equal-btn {
+  background-color: hsl(6, 63%, 50%);
+  color: white;
+}
+
+#bottom-btn {
+  justify-content: center;
+  gap: 3rem;
+}/*# sourceMappingURL=index.css.map */
